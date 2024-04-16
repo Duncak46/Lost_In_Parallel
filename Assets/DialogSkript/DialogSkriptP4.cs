@@ -17,8 +17,9 @@ public class DialogSkriptP4 : MonoBehaviour
     //Pomocný vìci
     private bool againcollision = true;
     private bool offobjekt = false;
-    [SerializeField]
-    private int coiny = 0;
+    
+    public static int coiny = 0;
+    public static bool maPaku = false;
     [SerializeField]
     private int WhichText = 0;
     [SerializeField]
@@ -37,6 +38,7 @@ public class DialogSkriptP4 : MonoBehaviour
     {
         if (offobjekt == true && Input.GetKeyDown(KeyCode.Space))
         {
+            movement.povoleno = true;
             offobjekt = false;
             bublina.SetActive(false);
             hotovo.Stop();
@@ -45,7 +47,7 @@ public class DialogSkriptP4 : MonoBehaviour
             StopAllCoroutines();
             Dialog.text = "";
             againcollision = true;
-
+            
         }
     }
     public void OnCollisionEnter2D(Collision2D col)
@@ -63,6 +65,7 @@ public class DialogSkriptP4 : MonoBehaviour
                 bublina.SetActive(true);
                 poprve.Play();
                 WhichText = 1;
+                ListUkolu.pridejUkolMince();
                 StartCoroutine(text1());
 
             }
@@ -71,8 +74,9 @@ public class DialogSkriptP4 : MonoBehaviour
                 againcollision = false;
                 offobjekt = true;
                 bublina.SetActive(true);
-                if (coiny == 2)
+                if (coiny >= 2)
                 {
+                    maPaku = true;
                     hotovo.Play();
                     WhichText = 2;
                     StartCoroutine(textdone());
@@ -89,6 +93,7 @@ public class DialogSkriptP4 : MonoBehaviour
 
     private IEnumerator text1()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < Text1HE.Length; i++)
@@ -102,6 +107,7 @@ public class DialogSkriptP4 : MonoBehaviour
     }
     private IEnumerator text2()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         for (int i = 0; i < Text2HE.Length; i++)
         {
@@ -112,6 +118,13 @@ public class DialogSkriptP4 : MonoBehaviour
     }
     private IEnumerator textdone()
     {
+        movement.povoleno = false;
+        ListUkolu.kolikUkolu--;
+        ListUkolu.promenaDoIf = ListUkolu.jakejtext_ukolMince;
+        ListUkolu.ukoltexty[ListUkolu.jakejtext_ukolMince].text = "";
+        ListUkolu.UpravitUkoly();
+
+        
         Dialog.fontSize = 36;
         for (int i = 0; i < TextHeDone.Length; i++)
         {

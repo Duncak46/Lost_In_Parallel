@@ -18,8 +18,10 @@ public class DialogSkriptP3 : MonoBehaviour
     //Pomocný vìci
     private bool againcollision = true;
     private bool offobjekt = false;
+
+    public static bool mam_psa = false;
     [SerializeField]
-    private bool mam_psa = false;
+    private Transform pes;
     [SerializeField]
     private int WhichText = 0;
     [SerializeField]
@@ -38,6 +40,7 @@ public class DialogSkriptP3 : MonoBehaviour
     {
         if (offobjekt == true && Input.GetKeyDown(KeyCode.Space))
         {
+            movement.povoleno = true;
             offobjekt = false;
             bublina.SetActive(false);
             hotovo.Stop();
@@ -64,8 +67,9 @@ public class DialogSkriptP3 : MonoBehaviour
                 bublina.SetActive(true);
                 poprve.Play();
                 WhichText = 1;
+                ListUkolu.pridejUkolPes();
                 StartCoroutine(text1());
-
+                
             }
             else if (WhichText == 1 && againcollision == true)
             {
@@ -74,8 +78,14 @@ public class DialogSkriptP3 : MonoBehaviour
                 bublina.SetActive(true);
                 if (mam_psa == true)
                 {
+                    pes.position = new Vector2(transform.position.x - 2f, transform.position.y);
+                    sekaniStromu.mamSekeru = true;
+                    PesMoving.muzeZacit = false;
+                    PesMoving.MaKost = false;
+                    pes.rotation = Quaternion.Euler(pes.rotation.x, 180f, pes.rotation.z);
                     hotovo.Play();
                     WhichText = 2;
+                    
                     StartCoroutine(textdone());
                 }
                 else
@@ -90,6 +100,7 @@ public class DialogSkriptP3 : MonoBehaviour
 
     private IEnumerator text1()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < Text1HE.Length; i++)
@@ -103,6 +114,7 @@ public class DialogSkriptP3 : MonoBehaviour
     }
     private IEnumerator text2()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         for (int i = 0; i < Text2HE.Length; i++)
         {
@@ -113,6 +125,13 @@ public class DialogSkriptP3 : MonoBehaviour
     }
     private IEnumerator textdone()
     {
+        movement.povoleno = false;
+        ListUkolu.kolikUkolu--;
+        ListUkolu.promenaDoIf = ListUkolu.jakejtext_ukolPes;
+        ListUkolu.ukoltexty[ListUkolu.jakejtext_ukolPes].text = "";
+        ListUkolu.UpravitUkoly();
+        ListUkolu.pridejUkolStrom();
+
         Dialog.fontSize = 36;
         for (int i = 0; i < TextHeDone.Length; i++)
         {

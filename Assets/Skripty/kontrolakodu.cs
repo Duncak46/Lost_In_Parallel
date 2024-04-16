@@ -58,6 +58,7 @@ public class kontrolakodu : MonoBehaviour
         var player = col.gameObject.GetComponent<movement>();
         if (player != null)
         {
+            ListUkolu.pridejUkolSifra();
             kodNaCanvas.SetActive(true);
         }
 
@@ -76,8 +77,13 @@ public class kontrolakodu : MonoBehaviour
             && kodcislo5.text == "2"
             && kodcisla6.text == "3"
             && kodcislo7.text == "0"
-            && kodcisla8.text == "1")
+            && kodcisla8.text == "1"
+            && WinAutomat.hracVyhral == true)
         {
+            ListUkolu.kolikUkolu--;
+            ListUkolu.promenaDoIf = ListUkolu.jakejtext_ukolSifra;
+            ListUkolu.ukoltexty[ListUkolu.jakejtext_ukolSifra].text = "";
+            ListUkolu.UpravitUkoly();
             levaBrana.transform.Rotate(5f, 420f, 30f);
             pravaBrana.transform.Rotate(5f, 60f, 30f);
             Destroy(naDelete);

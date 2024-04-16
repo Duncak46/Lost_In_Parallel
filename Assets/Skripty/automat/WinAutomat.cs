@@ -21,11 +21,15 @@ public class WinAutomat : MonoBehaviour
     [SerializeField]
     private GameObject canvas;
 
+    [SerializeField]
+    private GameObject player;
     private float speed = 85f;
+    public static bool hracVyhral = false;
     // Start is called before the first frame update
     void Start()
     {
-        canvas.transform.position = new Vector3(0,-50, -10);
+        canvas.transform.position = new Vector3(0f,-50f, -10f);
+        
     }
 
     // Update is called once per frame
@@ -53,8 +57,11 @@ public class WinAutomat : MonoBehaviour
 
     public void ExitWin()
     {
+        DialogSkriptP1.pocet_karet++;
+        hracVyhral = true;
+        ListUkolu.pridejUkolSifra();
         posouvaniSten.Nevypnuto = false;
-        canvas.transform.position = new Vector3(-4.33f, 0.2f, -10);
+        canvas.transform.position = player.transform.TransformPoint(new Vector3(0f, 0f, -10f));
         automat.SetActive(false);
     }
 }

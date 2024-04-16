@@ -41,6 +41,7 @@ public class DialogSkriptP6 : MonoBehaviour
     {
         if (offobjekt == true && Input.GetKeyDown(KeyCode.Space))
         {
+            movement.povoleno = true;
             offobjekt = false;
             bublina.SetActive(false);
             hotovo.Stop();
@@ -83,7 +84,7 @@ public class DialogSkriptP6 : MonoBehaviour
                     hotovo.Play();
                     WhichText = 2;
                     ukolONkvetiny = false;
-                    ListUkolu.kolikUkolu--;
+                    kolizeNaStartBoss1.pocet_zverokruhu++;
                     StartCoroutine(textdone());
                 }
                 else
@@ -98,6 +99,7 @@ public class DialogSkriptP6 : MonoBehaviour
 
     private IEnumerator text1()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < Text1HE.Length; i++)
@@ -111,6 +113,7 @@ public class DialogSkriptP6 : MonoBehaviour
     }
     private IEnumerator text2()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         for (int i = 0; i < Text2HE.Length; i++)
         {
@@ -122,8 +125,12 @@ public class DialogSkriptP6 : MonoBehaviour
     private IEnumerator textdone()
     {
         
-        ListUkolu.UpravitUkoly();
+        movement.povoleno = false;
+        ListUkolu.kolikUkolu--;
+        ListUkolu.promenaDoIf = ListUkolu.jakejtext_ukolkvetiny;
         ListUkolu.ukoltexty[ListUkolu.jakejtext_ukolkvetiny].text = "";
+        ListUkolu.UpravitUkoly();
+        
         ListUkolu.pridejUkolOrby();
         Dialog.fontSize = 28;
         for (int i = 0; i < TextHeDone.Length; i++)

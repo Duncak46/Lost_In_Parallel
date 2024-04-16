@@ -105,6 +105,7 @@ public class piskvorky : MonoBehaviour
     {
         if (piskvorkyZapnuto == true)
         {
+            movement.povoleno = false;
             PiskvorkyGame.SetActive(true);
         }
     }
@@ -733,6 +734,8 @@ public class piskvorky : MonoBehaviour
 
     public void exit()
     {
+        movement.povoleno = true;
+        DialogSkriptP1.pocet_karet++;
         piskvorkyZapnuto = false;
         PiskvorkyGame.SetActive(false);
         vyhra = true;

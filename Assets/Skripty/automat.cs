@@ -39,12 +39,4 @@ public class automat : MonoBehaviour
             }
         }
     }
-
-
-
-
-
-    
-
-    //Win
 }

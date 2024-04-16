@@ -5,11 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Zed
+  - Player2
+  - bulletBoss
+  - Boss1hra
+  - RestartBoss1
+  - EnemyBoss1
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
   - 

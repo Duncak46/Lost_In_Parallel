@@ -42,6 +42,7 @@ public class DialogSkriptP5 : MonoBehaviour
     {
         if (offobjekt == true && Input.GetKeyDown(KeyCode.Space))
         {
+            movement.povoleno = true;
             offobjekt = false;
             bublina.SetActive(false);
             poprve1.Stop();
@@ -140,6 +141,7 @@ public class DialogSkriptP5 : MonoBehaviour
 
     private IEnumerator text1()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < Text1HE.Length; i++)
@@ -153,6 +155,7 @@ public class DialogSkriptP5 : MonoBehaviour
     }
     private IEnumerator textJa()
     {
+        movement.povoleno = false;
         DialogJa.fontSize = 36;
         yield return new WaitForSeconds(0.6f);
         for (int i = 0; i < Text1ME.Length; i++)
@@ -166,6 +169,7 @@ public class DialogSkriptP5 : MonoBehaviour
     }
     private IEnumerator text2()
     {
+        movement.povoleno = false;
         ListUkolu.pridejUkolPiskvorky();
         Dialog.fontSize = 36;
         for (int i = 0; i < Text2HE.Length; i++)
@@ -177,6 +181,7 @@ public class DialogSkriptP5 : MonoBehaviour
     }
     private IEnumerator textdoneHE()
     {
+        movement.povoleno = false;
         yield return new WaitForSeconds(1f);
         Dialog.fontSize = 36;
         for (int i = 0; i < TextHeDone.Length; i++)
@@ -188,9 +193,13 @@ public class DialogSkriptP5 : MonoBehaviour
     }
     private IEnumerator textdoneME()
     {
+        movement.povoleno = false;
+        DialogSkriptP4.coiny++;
         ListUkolu.kolikUkolu--;
-        ListUkolu.UpravitUkoly();
+        ListUkolu.promenaDoIf = ListUkolu.jakejtext_ukolPiskvorky;
         ListUkolu.ukoltexty[ListUkolu.jakejtext_ukolPiskvorky].text = "";
+        ListUkolu.UpravitUkoly();
+       
         DialogJa.fontSize = 36;
         for (int i = 0; i < TextMeDone.Length; i++)
         {

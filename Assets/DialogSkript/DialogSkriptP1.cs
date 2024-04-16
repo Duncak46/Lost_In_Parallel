@@ -17,8 +17,8 @@ public class DialogSkriptP1 : MonoBehaviour
     //Pomocný vìci
     private bool againcollision = true;
     private bool offobjekt = false;
-    [SerializeField]
-    private int pocet_karet = 0;
+    
+    public static int pocet_karet = 0;
     [SerializeField]
     private int WhichText = 0;
     [SerializeField]
@@ -37,6 +37,7 @@ public class DialogSkriptP1 : MonoBehaviour
     {
         if (offobjekt == true && Input.GetKeyDown(KeyCode.Space))
         {
+            movement.povoleno = true;
             offobjekt = false;
             bublina.SetActive(false);
             hotovo.Stop();
@@ -63,6 +64,7 @@ public class DialogSkriptP1 : MonoBehaviour
                 bublina.SetActive(true);
                 poprve.Play();
                 WhichText = 1;
+                ListUkolu.pridejUkolKarty();
                 StartCoroutine(text1());
 
             }
@@ -75,6 +77,8 @@ public class DialogSkriptP1 : MonoBehaviour
                 {
                     hotovo.Play();
                     WhichText = 2;
+                    ListUkolu.pridejUkolZverokruh();
+                    kolizeNaStartBoss1.pocet_zverokruhu++;
                     StartCoroutine(textdone());
                 }
                 else
@@ -89,6 +93,7 @@ public class DialogSkriptP1 : MonoBehaviour
 
     private IEnumerator text1()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < Text1HE.Length; i++)
@@ -102,6 +107,7 @@ public class DialogSkriptP1 : MonoBehaviour
     }
     private IEnumerator text2()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         for (int i = 0; i < Text2HE.Length; i++)
         {
@@ -112,6 +118,12 @@ public class DialogSkriptP1 : MonoBehaviour
     }
     private IEnumerator textdone()
     {
+        
+        movement.povoleno = false;
+        ListUkolu.kolikUkolu--;
+        ListUkolu.promenaDoIf = ListUkolu.jakejtext_ukolKarty;
+        ListUkolu.ukoltexty[ListUkolu.jakejtext_ukolKarty].text = "";
+        ListUkolu.UpravitUkoly();
         Dialog.fontSize = 36;
         for (int i = 0; i < TextHeDone.Length; i++)
         {

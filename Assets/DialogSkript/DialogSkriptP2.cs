@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 public class DialogSkriptP2 : MonoBehaviour
 {
+    
     //HUDBA
     [SerializeField]
     private AudioSource hotovo;
@@ -18,7 +19,7 @@ public class DialogSkriptP2 : MonoBehaviour
     private bool againcollision = true;
     private bool offobjekt = false;
     
-    private bool mam_ryby = false;
+    public static bool mam_ryby = false;
     [SerializeField]
     private int WhichText = 0;
     [SerializeField]
@@ -37,6 +38,7 @@ public class DialogSkriptP2 : MonoBehaviour
     {
         if (offobjekt == true && Input.GetKeyDown(KeyCode.Space))
         {
+            movement.povoleno = true;
             offobjekt = false;
             bublina.SetActive(false);
             hotovo.Stop();
@@ -64,7 +66,7 @@ public class DialogSkriptP2 : MonoBehaviour
                 poprve.Play();
                 WhichText = 1;
                 StartCoroutine(text1());
-
+                ListUkolu.pridejUkolChytitRybu();
             }
             else if (WhichText == 1 && againcollision == true)
             {
@@ -77,6 +79,8 @@ public class DialogSkriptP2 : MonoBehaviour
 
                     hotovo.Play();
                     WhichText = 2;
+                    ListUkolu.pridejUkolZverokruh();
+                    kolizeNaStartBoss1.pocet_zverokruhu++;
                     StartCoroutine(textdone());
                 }
                 else
@@ -91,6 +95,7 @@ public class DialogSkriptP2 : MonoBehaviour
 
     private IEnumerator text1()
     {
+        movement.povoleno = false;
         Dialog.fontSize = 36;
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < Text1HE.Length; i++)
@@ -104,6 +109,7 @@ public class DialogSkriptP2 : MonoBehaviour
     }
     private IEnumerator text2()
     {
+        movement.povoleno = false;
         yield return new WaitForSeconds(0.5f);
         Dialog.fontSize = 36;
         for (int i = 0; i < Text2HE.Length; i++)
@@ -115,6 +121,13 @@ public class DialogSkriptP2 : MonoBehaviour
     }
     private IEnumerator textdone()
     {
+        
+        movement.povoleno = false;
+        ListUkolu.kolikUkolu--;
+        ListUkolu.promenaDoIf = ListUkolu.jakejtext_ukolRyba;
+        ListUkolu.ukoltexty[ListUkolu.jakejtext_ukolRyba].text = "";
+        ListUkolu.UpravitUkoly();
+        
         Dialog.fontSize = 36;
         for (int i = 0; i < TextHeDone.Length; i++)
         {
