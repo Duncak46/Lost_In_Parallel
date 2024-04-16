@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class sekaniStromu : MonoBehaviour
 {
+    
     public static bool mamSekeru = false;
     private bool zacnehra = false;
     private bool znovu = false;

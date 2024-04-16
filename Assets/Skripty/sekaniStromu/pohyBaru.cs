@@ -6,8 +6,11 @@ using TMPro;
 
 public class pohyBaru : MonoBehaviour
 {
+    public GameObject otevreniBosse3;
     [SerializeField]
     private GameObject strom;
+    [SerializeField]
+    private GameObject strom2;
     [SerializeField]
     private GameObject hra;
     [SerializeField]
@@ -81,6 +84,8 @@ public class pohyBaru : MonoBehaviour
             ListUkolu.promenaDoIf = ListUkolu.jakejtext_ukolStrom;
             ListUkolu.ukoltexty[ListUkolu.jakejtext_ukolStrom].text = "";
             ListUkolu.UpravitUkoly();
+            otevreniBosse3.SetActive(true);
+            Destroy(strom2);
             hra.SetActive(false);
         }
         else

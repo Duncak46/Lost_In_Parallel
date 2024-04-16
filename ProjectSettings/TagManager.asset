@@ -10,6 +10,10 @@ TagManager:
   - Boss1hra
   - RestartBoss1
   - EnemyBoss1
+  - sipkaLeft
+  - sipkaRight
+  - sipkaDown
+  - sipkaUp
   layers:
   - Default
   - TransparentFX
