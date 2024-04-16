@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CFF12EC7-9D6E-F9ED-CFA6-004B72E3E0E6}</ProjectGuid>
+    <ProjectGuid>{71886B58-E887-8260-3F38-4A9DB82C4F53}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,6 +61,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Skripty\Boss2\FinishBoss2.cs" />
+    <Compile Include="Assets\Skripty\boss3sipky.cs" />
     <Compile Include="Assets\Skripty\Boss1\restartboss1.cs" />
     <Compile Include="Assets\Skripty\kolizeCoin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Assets\Skripty\sbiraniZverokruhu.cs" />
     <Compile Include="Assets\Skripty\piskvorky.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Skripty\sipecky.cs" />
     <Compile Include="Assets\DialogSkript\DialogSkriptP5.cs" />
     <Compile Include="Assets\Skripty\PesMoving.cs" />
     <Compile Include="Assets\Skripty\scenemanager.cs" />
@@ -136,8 +138,6 @@
     <Compile Include="Assets\DialogSkript\DialogSkriptP3.cs" />
     <Compile Include="Assets\Skripty-Ukoly\ListUkolu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Skripty\boss3sipky.cs" />
-    <Compile Include="Assets\Skripty\sipecky.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
