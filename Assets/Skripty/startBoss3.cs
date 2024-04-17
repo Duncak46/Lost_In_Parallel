@@ -5,6 +5,7 @@ using UnityEngine;
 public class startBoss3 : MonoBehaviour
 {
     public GameObject hra;
+    public GameObject hraCanvas;
     static bool uzzapnuto = false;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class startBoss3 : MonoBehaviour
         {
             uzzapnuto = true;
             hra.SetActive(true);
+            hraCanvas.SetActive(true);
         }
     }
 }

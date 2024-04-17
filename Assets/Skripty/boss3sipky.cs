@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class boss3sipky : MonoBehaviour
 {
+    public GameObject Reset;
+    private Vector3 startPos;
+    public GameObject mover;
     Color barva;
     Color barvaForReset;
+    public AudioSource audioHra;
 
     
     private GameObject[] sipkyLevo;
@@ -27,6 +31,7 @@ public class boss3sipky : MonoBehaviour
         sipkyNahoru = GameObject.FindGameObjectsWithTag("sipkaUp");
         barvaForReset = HP1.color;
         barva = HexToColor(hexBarva);
+        startPos = mover.transform.position;
     }
     Color HexToColor(string hex)
     {
@@ -160,8 +165,43 @@ public class boss3sipky : MonoBehaviour
         }
         else
         {
-            //prohra();
-            Debug.Log("Prohra");
+            Prohra();
         }
+    }
+    void Prohra() 
+    {
+        mover.SetActive(false);
+        SipkyMove.move = false;
+        Reset.SetActive(true);
+
+        // Postupné ztišení hudby
+        StartCoroutine(ZtisitHudbu());
+
+        // Zastavení videa
+    }
+
+    IEnumerator ZtisitHudbu()
+    {
+        
+        while (audioHra.volume > 0)
+        {
+            audioHra.volume -= Time.deltaTime; 
+            yield return null;
+        }
+        audioHra.Stop();
+    }
+    public void restartovat()
+    {
+
+        HP1.color = barvaForReset;
+        HP2.color = barvaForReset;
+        HP3.color = barvaForReset;
+        SipkyMove.move = true;
+        HP = 3;
+        mover.SetActive(true);
+        mover.transform.position = startPos;
+        audioHra.volume = 0.5f;
+        audioHra.Play();
+        Reset.SetActive(false);
     }
 }
