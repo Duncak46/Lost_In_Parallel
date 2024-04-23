@@ -60,6 +60,13 @@ public class vyhejbaniLaseru : MonoBehaviour
                 prohra();
             }
         }
+        if (lasers.kolikatyLaser == 7)
+        {
+            if (lasers.pozice != 5)
+            {
+                prohra();
+            }
+        }
     }
     void prohra()
     {

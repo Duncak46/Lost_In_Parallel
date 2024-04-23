@@ -269,6 +269,27 @@ public class lasers : MonoBehaviour
         laser3.SetActive(false);
         laser4.SetActive(false);
         laser5.SetActive(false);
+        //LASER7
+        warning2.SetActive(true);
+        warning3.SetActive(true);
+        warning4.SetActive(true);
+        warning6.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        warning2.SetActive(false);
+        warning3.SetActive(false);
+        warning4.SetActive(false);
+        warning6.SetActive(false);
+        kolikatyLaser++;
+        laser2.SetActive(true);
+        laser3.SetActive(true);
+        laser4.SetActive(true);
+        laser6.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        laser2.SetActive(false);
+        laser3.SetActive(false);
+        laser4.SetActive(false);
+        laser6.SetActive(false);
+        //Zavolat funkci v kodu na spusteni druhy faze
     }
     
     public void restart()

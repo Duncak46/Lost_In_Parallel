@@ -97,8 +97,10 @@
     <Compile Include="Assets\Skripty\Boss2\ZapnutiBosse2.cs" />
     <Compile Include="Assets\DialogSkript\DialogSkriptP2.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\Skripty\mainBoss\vyhejbaniLaseru.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\Skripty\mainBoss\lasers.cs" />
     <Compile Include="Assets\Skripty\kontrolakodu.cs" />
     <Compile Include="Assets\Skripty\kolizePapirky.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Assets\Skripty\scenemanager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Skripty\kolizeNit.cs" />
+    <Compile Include="Assets\hracik.cs" />
     <Compile Include="Assets\Skripty\startBoss3.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
@@ -141,9 +144,7 @@
     <Compile Include="Assets\DialogSkript\DialogSkriptP3.cs" />
     <Compile Include="Assets\Skripty-Ukoly\ListUkolu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Skripty\mainBoss\lasers.cs" />
-    <Compile Include="Assets\hracik.cs" />
-    <Compile Include="Assets\Skripty\mainBoss\vyhejbaniLaseru.cs" />
+    <Compile Include="Assets\Skripty\mainBoss\undertaleMinihra.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
