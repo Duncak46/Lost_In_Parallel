@@ -59,10 +59,13 @@
   <ItemGroup>
     <Compile Include="Assets\Skripty\kytky.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\Skripty\mainBoss\pohybOhne.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Skripty\SipkyMove.cs" />
+    <Compile Include="Assets\Skripty\mainBoss\pohybNoziky.cs" />
     <Compile Include="Assets\Skripty\Boss2\FinishBoss2.cs" />
     <Compile Include="Assets\Skripty\boss3sipky.cs" />
+    <Compile Include="Assets\Skripty\mainBoss\stonkNaKolizi.cs" />
     <Compile Include="Assets\Skripty\Boss1\restartboss1.cs" />
     <Compile Include="Assets\Skripty\kolizeCoin.cs" />
     <Compile Include="Assets\Skripty\mainBoss\strileniOhne.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="Assets\Skripty\openMinimap.cs" />
     <Compile Include="Assets\DialogSkript\DialogSkriptP4.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\Skripty\mainBoss\ShootingGood.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Skripty\PortyLes.cs" />
     <Compile Include="Assets\Skripty\Boss2\CameraMovingBoss2.cs" />
@@ -148,10 +152,6 @@
     <Compile Include="Assets\DialogSkript\DialogSkriptP3.cs" />
     <Compile Include="Assets\Skripty-Ukoly\ListUkolu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Skripty\mainBoss\pohybOhne.cs" />
-    <Compile Include="Assets\Skripty\mainBoss\pohybNoziky.cs" />
-    <Compile Include="Assets\Skripty\mainBoss\ShootingGood.cs" />
-    <Compile Include="Assets\Skripty\mainBoss\stonkNaKolizi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
