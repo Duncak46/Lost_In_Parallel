@@ -14,6 +14,9 @@ TagManager:
   - sipkaRight
   - sipkaDown
   - sipkaUp
+  - hracBoss
+  - PlayerFinalBoss
+  - bossUp
   layers:
   - Default
   - TransparentFX

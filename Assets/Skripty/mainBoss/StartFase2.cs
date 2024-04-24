@@ -17,19 +17,15 @@ public class StartFase2 : MonoBehaviour
     public Transform posSRight;
     public Transform posFRight;
 
-    //OHNE A MECE
-    public GameObject kruh;
-    public GameObject OhenLong;
-    public GameObject OhenGood;
-    public GameObject OhenBad;
-    public GameObject Warning;
+    
 
     //pomocnyPromeny
     private float moveSpeed = 5f;
-    private bool faze1 = false;
-    private bool faze2 = false;
-    private bool faze3 = false;
-    private bool faze4 = false;
+    public static bool faze1 = false;
+    public static bool faze2 = false;
+    public static bool faze3 = false;
+    public static bool faze4 = false;
+    public static bool naMisteUp = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +36,10 @@ public class StartFase2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SkullUp.transform.position == posFUp.position && faze1)
+        {
+            naMisteUp = true;
+        }
         //Faze1
         if (faze1 || faze3)
         {
