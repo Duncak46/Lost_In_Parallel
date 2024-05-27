@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class boss3sipky : MonoBehaviour
 {
+    public GameObject sipkyR;
+    public GameObject sipkyY;
+    public GameObject sipkyG;
+    public GameObject sipkyB;
     public GameObject Reset;
     private Vector3 startPos;
     public GameObject mover;
@@ -192,7 +196,10 @@ public class boss3sipky : MonoBehaviour
     }
     public void restartovat()
     {
-
+        ActivateAllChildren(sipkyB);
+        ActivateAllChildren(sipkyY);
+        ActivateAllChildren(sipkyG);
+        ActivateAllChildren(sipkyR);
         HP1.color = barvaForReset;
         HP2.color = barvaForReset;
         HP3.color = barvaForReset;
@@ -203,5 +210,20 @@ public class boss3sipky : MonoBehaviour
         audioHra.volume = 0.5f;
         audioHra.Play();
         Reset.SetActive(false);
+    }
+    public void ActivateAllChildren(GameObject parent)
+    {
+        // Získáme poèet potomkù objektu
+        int childCount = parent.transform.childCount;
+
+        // Pro každý potomek
+        for (int i = 0; i < childCount; i++)
+        {
+            // Získáme reference na daného potomka
+            Transform child = parent.transform.GetChild(i);
+
+            // Aktivujeme potomka
+            child.gameObject.SetActive(true);
+        }
     }
 }
