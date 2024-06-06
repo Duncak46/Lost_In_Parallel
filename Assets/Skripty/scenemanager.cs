@@ -11,4 +11,8 @@ public class scenemanager : MonoBehaviour
     {
         SceneManager.LoadScene("HRA");
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

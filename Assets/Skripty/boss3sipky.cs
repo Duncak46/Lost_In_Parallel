@@ -15,6 +15,12 @@ public class boss3sipky : MonoBehaviour
     Color barvaForReset;
     public AudioSource audioHra;
 
+    public GameObject boss;
+    public GameObject spusteni;
+    public GameObject cameraHra;
+    public Transform hrac;
+    public GameObject orb;
+
     
     private GameObject[] sipkyLevo;
     private GameObject[] sipkyPravo;
@@ -46,7 +52,37 @@ public class boss3sipky : MonoBehaviour
     }
     void Update()
     {
-        foreach(GameObject sipka in sipkyDolu)
+        if (AreAllChildrenDeactivated(sipkyB))
+        {
+            if (AreAllChildrenDeactivated(sipkyG))
+            {
+                if (AreAllChildrenDeactivated(sipkyY))
+                {
+                    if (AreAllChildrenDeactivated(sipkyR))
+                    {
+                        Destroy(boss);
+                        Destroy(spusteni);
+                        audioHra.Stop();
+                        orb.SetActive(true);
+                        cameraHra.transform.position = new Vector3(hrac.position.x,hrac.position.y,-10f);
+                        movement.povoleno = true;
+                        Destroy(this);
+                    }
+                }
+            }
+        }
+        bool AreAllChildrenDeactivated(GameObject parent)
+        {
+            foreach (Transform child in parent.transform)
+            {
+                if (child.gameObject.activeSelf)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        foreach (GameObject sipka in sipkyDolu)
         {
             if (sipka.transform.position.y < 47.1f && sipka.activeSelf)
             {
