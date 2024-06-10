@@ -164,6 +164,7 @@
     <Compile Include="Assets\Scenes\KontrolaJestliJeHraZapnuta.cs" />
     <Compile Include="Assets\Scenes\konec.cs" />
     <Compile Include="Assets\Skripty\spusteniPortalu.cs" />
+    <Compile Include="Assets\Scenes\AudioManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
