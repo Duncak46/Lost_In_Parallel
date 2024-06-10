@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovingTextOnEnd : MonoBehaviour
 {
-    public float speed = 1.0f;
+    public float speed = 0.7f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class MovingTextOnEnd : MonoBehaviour
 
     IEnumerator konechry()
     {
-        yield return new WaitForSeconds(35f);
+        yield return new WaitForSeconds(70f);
         Debug.Log("bruh");
         Application.Quit();
     }
