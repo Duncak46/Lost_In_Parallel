@@ -20,6 +20,7 @@ public class ShootingGood : MonoBehaviour
 
     void Update()
     {
+        
         if (!dotkloSe)
         {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);

@@ -44,7 +44,7 @@ public class movementPlayer2 : MonoBehaviour
             }
             if (Input.GetKey("space") && isGrounded && canJump)
             {
-                jumpValue += 0.5f;
+                jumpValue += 0.05f;
                 rb.velocity = new Vector2(0.0f, rb.velocity.y);
             }
             if (jumpValue > 35f && isGrounded)

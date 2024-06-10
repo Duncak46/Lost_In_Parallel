@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class lasers : MonoBehaviour
 {
+    public GameObject hra2;
+    public GameObject hra3;
     public static bool movement;
     public static int kolikatyLaser = 0;
-    //UI
-    [SerializeField]
-    private GameObject resetUI;
+    
 
     //hrac
     [SerializeField]
@@ -80,10 +80,7 @@ public class lasers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (resetUI.activeSelf)
-        {
-            StopAllCoroutines();
-        }
+        
         if (Input.GetKeyDown(KeyCode.D))
         {
             if (pozice != 3 && pozice < 10 && pozice > 0 || pozice != 6 && pozice < 10 && pozice > 0 || pozice != 9 && pozice < 10 && pozice > 0)
@@ -289,12 +286,9 @@ public class lasers : MonoBehaviour
         laser3.SetActive(false);
         laser4.SetActive(false);
         laser6.SetActive(false);
+        hra2.SetActive(true);
+        hra3.SetActive(true);
+        gameObject.SetActive(false);
         //Zavolat funkci v kodu na spusteni druhy faze
-    }
-    
-    public void restart()
-    {
-        resetUI.SetActive(false);
-        Start();
     }
 }

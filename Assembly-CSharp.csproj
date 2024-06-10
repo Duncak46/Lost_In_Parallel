@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Skripty\kytky.cs" />
+    <Compile Include="Assets\Skripty\HPSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Skripty\mainBoss\pohybOhne.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\Skripty\Boss1\kolizeNaStartBoss1.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Skripty\kolizeKost.cs" />
+    <Compile Include="Assets\bruh.cs" />
     <Compile Include="Assets\Skripty\kod.cs" />
     <Compile Include="Assets\Skripty-Ukoly\POSTAVA6UKOL.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
@@ -125,10 +127,12 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Skripty\kolizeAutomat.cs" />
     <Compile Include="Assets\Skripty\sbiraniZverokruhu.cs" />
+    <Compile Include="Assets\Skripty\mainBoss\restartovaniMain.cs" />
     <Compile Include="Assets\Skripty\piskvorky.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Skripty\sipecky.cs" />
     <Compile Include="Assets\DialogSkript\DialogSkriptP5.cs" />
+    <Compile Include="Assets\Skripty\mainBoss\samotnejskript.cs" />
     <Compile Include="Assets\Skripty\PesMoving.cs" />
     <Compile Include="Assets\Skripty\scenemanager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
@@ -139,8 +143,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Skripty\Boss1\SpawnWaves.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Skripty\teleportFinalBoss.cs" />
     <Compile Include="Assets\Skripty\mainBoss\undertaleMinihra.cs" />
     <Compile Include="Assets\Skripty\Boss1\Enemy.cs" />
+    <Compile Include="Assets\Skripty\odemknutiFinal.cs" />
     <Compile Include="Assets\Skripty\Boss1\Weapon.cs" />
     <Compile Include="Assets\Skripty\automat\raketaMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -154,6 +160,11 @@
     <Compile Include="Assets\Skripty\aktivoace.cs" />
     <Compile Include="Assets\Skripty-Ukoly\ListUkolu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Scenes\RestartMainBoss.cs" />
+    <Compile Include="Assets\Scenes\KontrolaJestliJeHraZapnuta.cs" />
+    <Compile Include="Assets\Scenes\konec.cs" />
+    <Compile Include="Assets\Skripty\spusteniPortalu.cs" />
+    <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

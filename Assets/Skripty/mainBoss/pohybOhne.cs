@@ -17,6 +17,7 @@ public class pohybOhne : MonoBehaviour
 
     void Update()
     {
+        
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         if (transform.position == target)
         {
@@ -33,7 +34,7 @@ public class pohybOhne : MonoBehaviour
         var player = collision.gameObject.GetComponent<pohybmainboss>();
         if (player != null)
         {
-            Debug.Log("odebralo se ti HP!");
+            HPSystem.HPplayer--;
             Destroy(gameObject);
         }
     }

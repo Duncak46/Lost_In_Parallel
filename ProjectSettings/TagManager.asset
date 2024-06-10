@@ -17,6 +17,7 @@ TagManager:
   - hracBoss
   - PlayerFinalBoss
   - bossUp
+  - prefabDEL
   layers:
   - Default
   - TransparentFX

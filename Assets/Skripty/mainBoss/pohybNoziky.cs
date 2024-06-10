@@ -36,6 +36,7 @@ public class pohybNoziky : MonoBehaviour
 
     void Update()
     {
+        
         if (dopohybu)
         {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
@@ -61,7 +62,7 @@ public class pohybNoziky : MonoBehaviour
         var player = collision.gameObject.GetComponent<pohybmainboss>();
         if (player != null)
         {
-            Debug.Log("odebralo se ti HP!");
+            HPSystem.HPplayer--;
             Destroy(gameObject);
         }
     }

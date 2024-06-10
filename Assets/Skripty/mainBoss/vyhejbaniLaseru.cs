@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class vyhejbaniLaseru : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject resetUI;
+    
 
     void Update()
     {
@@ -71,6 +71,7 @@ public class vyhejbaniLaseru : MonoBehaviour
     void prohra()
     {
         lasers.movement = false;
-        resetUI.SetActive(true);
+        KontrolaJestliJeHraZapnuta.ZapnutaHra = false;
+        SceneManager.LoadScene("RestartMainBossik");
     }
 }

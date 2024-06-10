@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2518928517318721091}
   m_Layer: 0
   m_Name: Stonk 1
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8815080133634014393}
   m_Layer: 0
   m_Name: NUZ (3)
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 8237683291287013930}
   m_Layer: 0
   m_Name: NUZ (9)
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 1839165127061652707}
   m_Layer: 0
   m_Name: NUZ (2)
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 2175385078645177771}
   m_Layer: 0
   m_Name: NUZ (4)
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 203574174032502286}
   m_Layer: 0
   m_Name: NUZ (8)
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 7207191750047454157}
   m_Layer: 0
   m_Name: KoloNaNoze
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 4882439266832054071}
   m_Layer: 0
   m_Name: NUZ (5)
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 8559161203049747290}
   m_Layer: 0
   m_Name: NUZ (1)
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1153,7 +1153,7 @@ GameObject:
   - component: {fileID: 1354037447232569348}
   m_Layer: 0
   m_Name: NUZ
-  m_TagString: Untagged
+  m_TagString: prefabDEL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

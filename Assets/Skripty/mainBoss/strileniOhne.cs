@@ -25,12 +25,13 @@ public class strileniOhne : MonoBehaviour
     public float warningDuration = 0.75f; // Doba zobrazení warning symbolu
     public float stonkDuration = 2f; // Doba existence stonku
     private bool spusteno = true;
-    public static int HP = 15;
+    public static int HP = 5;
     void Update()
     {
         if (HP <=0)
         {
             Debug.Log("Win");
+            //Nastavit na scenu s koncem
         }
         if (StartFase2.naMisteUp == true && spusteno)
         {
