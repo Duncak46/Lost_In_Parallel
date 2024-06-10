@@ -165,6 +165,7 @@
     <Compile Include="Assets\Scenes\konec.cs" />
     <Compile Include="Assets\Skripty\spusteniPortalu.cs" />
     <Compile Include="Assets\Scenes\AudioManager.cs" />
+    <Compile Include="Assets\Scenes\refreshSkakani.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
