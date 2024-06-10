@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class teleportFinalBoss : MonoBehaviour
 {
+    public GameObject finalGame;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class teleportFinalBoss : MonoBehaviour
         if (player != null) {
             movement.povoleno = false;
             KontrolaJestliJeHraZapnuta.ZapnutaHra = true;
+            finalGame.SetActive(true);
             Destroy(player);
         }
     }

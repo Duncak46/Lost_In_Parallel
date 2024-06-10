@@ -164,7 +164,6 @@
     <Compile Include="Assets\Scenes\KontrolaJestliJeHraZapnuta.cs" />
     <Compile Include="Assets\Scenes\konec.cs" />
     <Compile Include="Assets\Skripty\spusteniPortalu.cs" />
-    <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
